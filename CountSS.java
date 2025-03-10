@@ -40,11 +40,22 @@ public class CountSS {
     }
 
     public static void main(String[] args) {
-        ArrayList<Integer> arr = new ArrayList<>();
-        arr.add(1);
-        arr.add(2);
-        arr.add(5);
-        arr.add(4);
-        System.out.println(countSubsets(arr, 6, 0));
+        // ArrayList<Integer> arr = new ArrayList<>();
+        // arr.add(3);
+        // arr.add(10);
+        // arr.add(5);
+        // System.out.println(countSubsets(arr, 8, 0));
+        // System.out.println(countSubsets(arr, 20, 0));
+        // System.out.println(countSubsets(arr, 13, 0));
+        int[] arr = {3, 5, 10};
+        List<List<Integer>> ans = new ArrayList<>();
+        helper(ans, new ArrayList<>(), 8, 0, arr);
+        System.out.println(ans.size());
+        ans = new ArrayList<>();
+        helper(ans, new ArrayList<>(), 20, 0, arr);
+        System.out.println(ans.size());
+        ans = new ArrayList<>();
+        helper(ans, new ArrayList<>(), 13, 0, arr);
+        System.out.println(ans.size());
     }
 }
